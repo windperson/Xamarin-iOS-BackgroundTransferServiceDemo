@@ -1,4 +1,5 @@
-﻿using Foundation;
+﻿using System;
+using Foundation;
 using UIKit;
 
 namespace BackgroundTransferServiceDemo
@@ -8,6 +9,8 @@ namespace BackgroundTransferServiceDemo
     [Register("AppDelegate")]
     public class AppDelegate : UIApplicationDelegate
     {
+        public Action BackgroundSessionCompleteHandler { get; set; }
+
         // class-level declarations
 
         public override UIWindow Window
@@ -16,18 +19,10 @@ namespace BackgroundTransferServiceDemo
             set;
         }
 
-        public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+        public override void HandleEventsForBackgroundUrl(UIApplication application, string sessionIdentifier, Action completionHandler)
         {
-            // create a new window instance based on the screen size
-            Window = new UIWindow(UIScreen.MainScreen.Bounds);
-
-            // If you have defined a root view controller, set it here:
-            // Window.RootViewController = myViewController;
-
-            // make the window visible
-            Window.MakeKeyAndVisible();
-
-            return true;
+            Console.WriteLine("HandleEventsForBackgroundUrl");
+            BackgroundSessionCompleteHandler = completionHandler;
         }
 
         public override void OnResignActivation(UIApplication application)
@@ -36,12 +31,14 @@ namespace BackgroundTransferServiceDemo
             // This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) 
             // or when the user quits the application and it begins the transition to the background state.
             // Games should use this method to pause the game.
+            Console.WriteLine("OnResignActivation");
         }
 
         public override void DidEnterBackground(UIApplication application)
         {
             // Use this method to release shared resources, save user data, invalidate timers and store the application state.
             // If your application supports background exection this method is called instead of WillTerminate when the user quits.
+            Console.WriteLine("DidEnterBackground");
         }
 
         public override void WillEnterForeground(UIApplication application)
@@ -54,6 +51,7 @@ namespace BackgroundTransferServiceDemo
         {
             // Restart any tasks that were paused (or not yet started) while the application was inactive. 
             // If the application was previously in the background, optionally refresh the user interface.
+            Console.WriteLine("OnActivated");
         }
 
         public override void WillTerminate(UIApplication application)

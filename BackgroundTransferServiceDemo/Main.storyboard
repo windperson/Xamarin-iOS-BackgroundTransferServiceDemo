@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="245">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="244">
+            <objects>
+                <navigationController id="245" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="247">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="387" destination="261" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="248" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-579" y="-402"/>
+        </scene>
+        <scene sceneID="260">
+            <objects>
+                <viewController id="261" sceneMemberID="viewController" customClass="DemoViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="258"/>
+                        <viewControllerLayoutGuide type="bottom" id="259"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="262">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="391" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="392" misplaced="YES">
+                                <rect key="frame" x="74" y="283" width="188" height="2"/>
+                                <constraints>
+                                    <constraint id="904" firstAttribute="width" constant="188"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="902" firstItem="262" firstAttribute="bottom" secondItem="392" secondAttribute="bottom" constant="283"/>
+                            <constraint id="903" firstItem="262" firstAttribute="trailing" secondItem="392" secondAttribute="trailing" constant="47"/>
+                            <constraint id="905" firstItem="262" firstAttribute="trailingMargin" secondItem="392" secondAttribute="trailing" constant="31"/>
+                        </constraints>
+                    </view>
+                    <navigationItem id="386" key="navigationItem">
+                        <barButtonItem key="leftBarButtonItem" id="389" title="Crash"/>
+                        <barButtonItem key="rightBarButtonItem" id="390" title="Start"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="392" id="name-outlet-392"/>
+                        <outlet property="imageView" destination="391" id="name-outlet-391"/>
+                        <outlet property="crashButton" destination="389" id="name-outlet-389"/>
+                        <outlet property="startButton" destination="390" id="name-outlet-390"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="263" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-145" y="-402"/>
+        </scene>
+    </scenes>
+</document>
