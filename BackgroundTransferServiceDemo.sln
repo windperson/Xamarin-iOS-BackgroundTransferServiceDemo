@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundTransferServiceDemo", "BackgroundTransferServiceDemo\BackgroundTransferServiceDemo.csproj", "{D431BA35-70D7-4497-82CF-511522F3384D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D431BA35-70D7-4497-82CF-511522F3384D}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{D431BA35-70D7-4497-82CF-511522F3384D}.Debug|iPhone.Build.0 = Debug|iPhone
+		{D431BA35-70D7-4497-82CF-511522F3384D}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{D431BA35-70D7-4497-82CF-511522F3384D}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{D431BA35-70D7-4497-82CF-511522F3384D}.Release|iPhone.ActiveCfg = Release|iPhone
+		{D431BA35-70D7-4497-82CF-511522F3384D}.Release|iPhone.Build.0 = Release|iPhone
+		{D431BA35-70D7-4497-82CF-511522F3384D}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{D431BA35-70D7-4497-82CF-511522F3384D}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23ED7A79-72E3-44E2-9F50-A54547603402}
+	EndGlobalSection
+EndGlobal
